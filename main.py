@@ -1,13 +1,17 @@
 class Board:
 
-    def __init__(self,bNum):
-        self.bNum = bNum
+    def __init__(self,board):
+        self.board = board
 
     def createBoard(self):
-        self.bNum = [[1,2,3],[4,5,6],[7,8,9]]
+        self.board = [[1,2,3],[4,5,6],[7,8,9]]
     
     def print(self):
-        for x in self.bNum : print(x)
+        for x in self.board : print(x)
+    
+    
+    
+
 
 
 class Player:
