@@ -1,10 +1,10 @@
-import main
+import supprt
 
 
-player1 = main.Player("P1",'x')
-player2 = main.Player("P2",'x')
+player1 = supprt.Player("P1",'x')
+player2 = supprt.Player("P2",'x')
 
-board = main.Board(1)
+board = supprt.Board(1)
 board.createBoard()
 
 def play(sym):
@@ -23,10 +23,18 @@ print("Player01 is X")
 print("Player02 is O\n")
 
 
-while(not main.checkWin(board.board)):
+while(True):
     # Player 01
     play('X')
-    if main.checkWin(board.board): break
-    play('O')
+    if supprt.checkWin(board.board): 
+        player1.score += 1
+        print("Player 01 Won")
+        break
     
+    # Player 02
+    play('O')
+    if supprt.checkWin(board.board): 
+        player2.score += 1
+        print("Player 02 Won")
+        break
     
